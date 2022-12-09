@@ -9,7 +9,7 @@ class CommentSerializer(serializers.ModelSerializer):
     )
     post = serializers.PrimaryKeyRelatedField(
         read_only=True)
-    
+
     class Meta:
         model = Comment
         fields = ('author', 'post', 'text', 'created', 'id')
